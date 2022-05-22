@@ -33,3 +33,5 @@ Events.Marketing = [{
   },
   audio: AudioLibrary.EVENT_NOISES_INSIDE
 }];
+
+Events.Marketing = [];

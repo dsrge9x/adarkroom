@@ -1,7 +1,7 @@
 (function() {
 	var Engine = window.Engine = {
 
-		SITE_URL: encodeURIComponent("http://adarkroom.doublespeakgames.com"),
+		SITE_URL: encodeURIComponent("https://adr.inorin.cc"),
 		VERSION: 1.3,
 		MAX_STORE: 99999999999999,
 		SAVE_DISPLAY: 30 * 1000,
@@ -87,14 +87,14 @@
 			this._log = this.options.log;
 
 			// Check for HTML5 support
-			if(!Engine.browserValid()) {
-				window.location = 'browserWarning.html';
-			}
+			// if(!Engine.browserValid()) {
+			// 	window.location = 'browserWarning.html';
+			// }
 
 			// Check for mobile
-			if(Engine.isMobile()) {
-				window.location = 'mobileWarning.html';
-			}
+			// if(Engine.isMobile()) {
+			// 	window.location = 'mobileWarning.html';
+			// }
 
 			Engine.disableSelection();
 
@@ -148,11 +148,11 @@
 				.click(() => Engine.toggleVolume())
 				.appendTo(menu);
 
-			$('<span>')
-				.addClass('appStore menuBtn')
-				.text(_('get the app.'))
-				.click(Engine.getApp)
-				.appendTo(menu);
+			// $('<span>')
+			// 	.addClass('appStore menuBtn')
+			// 	.text(_('get the app.'))
+			// 	.click(Engine.getApp)
+			// 	.appendTo(menu);
 
 			$('<span>')
 				.addClass('lightsOff menuBtn')
@@ -172,11 +172,11 @@
 				.click(Engine.confirmDelete)
 				.appendTo(menu);
 
-			$('<span>')
-				.addClass('menuBtn')
-				.text(_('share.'))
-				.click(Engine.share)
-				.appendTo(menu);
+			// $('<span>')
+			// 	.addClass('menuBtn')
+			// 	.text(_('share.'))
+			// 	.click(Engine.share)
+			// 	.appendTo(menu);
 
 			$('<span>')
 				.addClass('menuBtn')
@@ -196,8 +196,8 @@
 
 			$('<span>')
 				.addClass('menuBtn')
-				.text(_('github.'))
-				.click(function() { window.open('https://github.com/doublespeakgames/adarkroom'); })
+				.text('祈之存档库')
+				.click(function() { window.open('https://inorin.cc/'); })
 				.appendTo(menu);
 
 			// Register keypress handlers
