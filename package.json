@@ -1,6 +1,5 @@
 {
   "name": "adarkroom",
-  "type": "module",
   "version": "1.0.0",
   "private": true,
   "repository": "git@github.com:doublespeakgames/adarkroom.git",
@@ -12,5 +11,8 @@
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.1.0"
   }
 }
