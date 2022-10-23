@@ -32,6 +32,11 @@ const pofiles = glob.sync('dist/**/*.po', { cwd: __dirname });
 pofiles.forEach((file) => {
   fse.removeSync(path.resolve(__dirname, file));
 });
+// delete po files
+const potfiles = glob.sync('dist/**/*.pot', { cwd: __dirname });
+potfiles.forEach((file) => {
+  fse.removeSync(path.resolve(__dirname, file));
+});
 
 // minify html
 const htmlfiles = glob.sync('dist/**/*.html', { cwd: __dirname });
