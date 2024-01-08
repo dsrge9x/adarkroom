@@ -142,11 +142,11 @@
         });
       }
 
-      $('<span>')
-        .addClass('volume menuBtn')
-        .text(_('sound on.'))
-        .click(() => Engine.toggleVolume())
-        .appendTo(menu);
+      // $('<span>')
+      //   .addClass('volume menuBtn')
+      //   .text(_('sound on.'))
+      //   .click(() => Engine.toggleVolume())
+      //   .appendTo(menu);
 
 			// $('<span>')
 			// 	.addClass('appStore menuBtn')
@@ -242,10 +242,10 @@
         Engine.triggerHyperMode();
       }
 
-      Engine.toggleVolume(Boolean($SM.get('config.soundOn')));
-      if(!AudioEngine.isAudioContextRunning()){
-        document.addEventListener('click', Engine.resumeAudioContext, true);
-      }
+      // Engine.toggleVolume(Boolean($SM.get('config.soundOn')));
+      // if(!AudioEngine.isAudioContextRunning()){
+      //   document.addEventListener('click', Engine.resumeAudioContext, true);
+      // }
       
       Engine.saveLanguage();
       Engine.travelTo(Room);
@@ -867,30 +867,30 @@
     }
 
     // Tell new users that there's sound now!
-    $SM.set('playStats.audioAlertShown', true);
-    Events.startEvent({
-      title: _('Sound Available!'),
-      scenes: {
-        start: {
-          text: [
-            _('ears flooded with new sensations.'),
-            _('perhaps silence is safer?')
-          ],
-          buttons: {
-            'yes': {
-              text: _('enable audio'),
-              nextScene: 'end',
-              onChoose: () => Engine.toggleVolume(true)
-            },
-            'no': {
-              text: _('disable audio'),
-              nextScene: 'end',
-              onChoose: () => Engine.toggleVolume(false)
-            }
-          }
-        }
-      }
-    });
+    // $SM.set('playStats.audioAlertShown', true);
+    // Events.startEvent({
+    //   title: _('Sound Available!'),
+    //   scenes: {
+    //     start: {
+    //       text: [
+    //         _('ears flooded with new sensations.'),
+    //         _('perhaps silence is safer?')
+    //       ],
+    //       buttons: {
+    //         'yes': {
+    //           text: _('enable audio'),
+    //           nextScene: 'end',
+    //           onChoose: () => Engine.toggleVolume(true)
+    //         },
+    //         'no': {
+    //           text: _('disable audio'),
+    //           nextScene: 'end',
+    //           onChoose: () => Engine.toggleVolume(false)
+    //         }
+    //       }
+    //     }
+    //   }
+    // });
   }
 
 })();
