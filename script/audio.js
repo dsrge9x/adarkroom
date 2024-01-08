@@ -20,13 +20,13 @@ var AudioEngine = {
         // ** could be used later if we specify a better set of
         // audio files to preload -- i.e. we probably don't need to load
         // the later villages or events audio, and esp. not the ending
-        for (var key in AudioLibrary) {
-            if (
-            key.toString().indexOf('MUSIC_') > -1 ||
-            key.toString().indexOf('EVENT_') > -1) {
-                AudioEngine.loadAudioFile(AudioLibrary[key]);
-            }
-        }
+        // for (var key in AudioLibrary) {
+        //     if (
+        //     key.toString().indexOf('MUSIC_') > -1 ||
+        //     key.toString().indexOf('EVENT_') > -1) {
+        //         AudioEngine.loadAudioFile(AudioLibrary[key]);
+        //     }
+        // }
     },
     _initAudioContext: function () {
         AudioEngine._audioContext = new (window.AudioContext || window.webkitAudioContext);
@@ -170,22 +170,22 @@ var AudioEngine = {
         }
     },
     playBackgroundMusic: function (src) {
-        if (!AudioEngine._initialized) {
-          return;
-        }
-        AudioEngine.loadAudioFile(src)
-            .then(function (buffer) {
-                AudioEngine._playBackgroundMusic(buffer);
-            });
+        // if (!AudioEngine._initialized) {
+        //   return;
+        // }
+        // AudioEngine.loadAudioFile(src)
+        //     .then(function (buffer) {
+        //         AudioEngine._playBackgroundMusic(buffer);
+        //     });
     },
     playEventMusic: function (src) {
-        if (!AudioEngine._initialized) {
-          return;
-        }
-        AudioEngine.loadAudioFile(src)
-            .then(function (buffer) {
-                AudioEngine._playEventMusic(buffer);
-            });
+        // if (!AudioEngine._initialized) {
+        //   return;
+        // }
+        // AudioEngine.loadAudioFile(src)
+        //     .then(function (buffer) {
+        //         AudioEngine._playEventMusic(buffer);
+        //     });
     },
     stopEventMusic: function () {
         if (!AudioEngine._initialized) {
@@ -194,13 +194,13 @@ var AudioEngine = {
         AudioEngine._stopEventMusic();
     },
     playSound: function (src) {
-        if (!AudioEngine._initialized) {
-          return;
-        }
-        AudioEngine.loadAudioFile(src)
-            .then(function (buffer) {
-                AudioEngine._playSound(buffer);
-            });
+        // if (!AudioEngine._initialized) {
+        //   return;
+        // }
+        // AudioEngine.loadAudioFile(src)
+        //     .then(function (buffer) {
+        //         AudioEngine._playSound(buffer);
+        //     });
     },
     loadAudioFile: function (src) {
         if (src.indexOf('http') === -1) {
